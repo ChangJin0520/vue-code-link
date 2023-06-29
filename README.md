@@ -58,15 +58,18 @@
         }
     }
     ```
-
-    4、main.js 中初始化工具
-
+    4、添加 CodeLinkPlugin
     ```js
-    // main.js
-    import { vueCodeLinkClient } from 'vue-code-link'
-
-    if (process.env.APP_ENV === 'development') vueCodeLinkClient?.init(); // 只在开发环境生效；开发环境的判断请根据项目设置
+    import { CodeLinkPlugin } from 'vue-code-link'
+    {
+        // ... 省略代码
+        plugins: [
+            ...(isProduction ? [] : [new CodeLinkPlugin(require('html-webpack-plugin'))])     
+        ]
+        // ... 省略代码
+    }
     ```
+    
 ## VSCode 的 code 命令
 
 1. VSCode 的定位功能是基于 VSCode 的 `code 命令`实现的，所以请确认 code 命令是否有效（cmd 或 shell 里直接执行 code）
