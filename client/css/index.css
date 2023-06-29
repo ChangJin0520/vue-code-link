@@ -1,0 +1,25 @@
+.click-ball {
+    position: fixed;
+    z-index: 99999;
+    width: 40px;
+    height: 40px;
+    background-color: #ed521f;
+    border-radius: 20px;
+    opacity: 0.6;
+}
+
+.hide-slow {
+    color: #fff;
+    animation: hidetip 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hidetip {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(0, 0);
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "name": "@qys/vue-code-link",
+    "version": "1.0.29",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "build:client": "tsc client/index.ts",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "npm run build:client && npm run build"
+    },
+    "types": "index.d.ts",
+    "files": [
+        "*",
+        "!index.ts",
+        "!**/*.ts",
+        "rollup.config.js",
+        "tsconfig.json"
+    ],
+    "keywords": [
+        "vue",
+        "code link",
+        "link",
+        "vscode",
+        "vue-code-link",
+        "click page",
+        "location",
+        "vue-dev-code-link",
+        "dev",
+        "click",
+        "代码定位",
+        "点击页面定位",
+        "点击",
+        "定位",
+        "页面元素"
+    ],
+    "author": "QYS FE",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chana1024/linzhinan-vue-code-link.git"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "@types/node": "^18.11.9",
+        "core-js": "3.23.4",
+        "rollup": "^2.79.1",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-typescript2": "^0.34.1",
+        "tslib": "^2.4.1",
+        "typescript": "^4.8.4"
+    },
+    "browser": {
+        "child_process": false
+    },
+    "dependencies": {}
+}
